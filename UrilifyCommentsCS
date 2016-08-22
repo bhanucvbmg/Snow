@@ -1,0 +1,20 @@
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+if (oldValue==='' && newValue!=''){
+   //Type appropriate comment here, and begin script below
+var new_comments = g_form.getValue('comments')+'';
+if(new_comments!='' && /http/.test(new_comments) && /code/.test(new_comments)===false){
+  g_form.setValue('comments', urlify(new_comments));
+}
+}
+// function to create link
+function urlify(text) {
+var urlRegex = /(https?:\/\/[^\s]+)/g;
+return text.replace(urlRegex, function(url) {
+  return '[code]<p><a class="web" target="_blank" href="' + url + '">' + url + '</a></p>[/code]';
+});
+}
+	return;
+}

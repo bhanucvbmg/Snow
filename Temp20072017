@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<j:jelly xmlns:j="jelly:core" xmlns:g="glide" xmlns:g2="null" xmlns:j2="null" trim="false">
+   <g:requires name="jquery_min.jsdx" />
+   <g:requires name="FileSaver.jsdx" />
+   <g:requires name="jquery_wordexport.jsdx" />
+   <g:requires name="html2pdf.jsdbx" />
+   <html>
+      <head>
+         <meta charset="utf-8" />
+         <title>Export HTML and Image to Word</title>
+      </head>
+      <body>
+		  <a class="word-export" href="javascript:void(0)">Export to Word (.doc)</a>
+		   <div class="container" id="printable">
+         <ol>
+            <li class="steps">Trigger download whenever is required using the word-export function.</li>
+          </ol>
+			   
+			   	
+         <div class="word-content">
+            <h1>Title Page Document</h1>
+            <p>ohm namah sivaya, ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,</p>
+            <p />
+            <p>ohm namah sivaya, ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,ohm namah sivaya,</p>
+         </div>
+		</div>
+		  <script>
+	abc('.word-export').click(function(event){
+		abc('.word-content').wordExport();
+	});
+	</script>
+      </body>
+   </html>
+</j:jelly>
